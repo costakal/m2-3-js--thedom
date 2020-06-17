@@ -75,8 +75,8 @@ This takes a CSS selector.
 ```
 
 ```js
-const container = document.querySelector('.container');
-const title = document.querySelector('#title');
+const container = document.querySelector(".container");
+const title = document.querySelector("#title");
 ```
 
 ---
@@ -105,7 +105,10 @@ You can modify the content of a node with:
 ```
 
 ```js
-// Example
+const title = document.querySelector("#title");
+title.innerText = "The newer title";
+
+title.innerHTML = "the <span>newer</span> title";
 ```
 
 ---
@@ -126,7 +129,13 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 - [`node.appendChild()`](https://www.w3schools.com/jsref/met_node_appendchild.asp)
 
 ```js
-// Example
+<div class="contatiner"></div>;
+
+const container = document.querySelector(".container");
+
+const title = document.createElement("h1");
+title.innerText = "My Title";
+container.appendChild(title);
 ```
 
 ---
@@ -150,9 +159,9 @@ We can style elements from JavaScript.
 ```
 
 ```js
-const myDiv = document.querySelector('#my-div');
+const myDiv = document.querySelector("#my-div");
 
-myDiv.style.background = 'purple';
+myDiv.style.background = "purple";
 ```
 
 ---
@@ -184,9 +193,9 @@ To modify a `classList`, we have a few methods we can call.
 
 ```js
 // Example
-myDiv.classList.add('primary');
+myDiv.classList.add("primary");
 
-myDiv.classList.remove('secondary');
+myDiv.classList.remove("secondary");
 
-myDiv.classList.toggle('active');
+myDiv.classList.toggle("active");
 ```
